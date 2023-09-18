@@ -10,5 +10,6 @@ Griglia Campo Minato. L’utente clicca su un bottone che genererà una griglia 
   - creo una funzione di reset per svuotare il container;
   - Creo una funzione per generare un quadrato;
   - creo un ciclo per stampare 100 volte il quadrato;
+  - inserisco il ciclo all'interno dell'evento click del bottone;
 
  

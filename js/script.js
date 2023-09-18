@@ -10,25 +10,33 @@
 //   - creo una funzione di reset per svuotare il container;
 //   - Creo una funzione per generare un quadrato;
 //   - creo un ciclo per stampare 100 volte il quadrato;
+// aggiungo la classe active al quadrato 
+
 
  
 const button = document.getElementById("start-game");
-
 const container = document.querySelector(".container_sp");
 
+resetGame()
 
-button.addEventListener("click", function(){
+startGameEasy()
 
-  container.classList.toggle("d-none");
+function startGameEasy(){
 
+  button.addEventListener("click", function(){
 
-})
+    for(i = 1; i < 101; i++) {
+      const square = createSquare(i);
+      container.append(square);
+      square.addEventListener("click", function(){
+      this.classList.toggle("active");
+      })
 
-for(i = 1; i < 101; i++) {
-  createSquare(i);
-
+    }
+  
+  })
+  
 }
-
 
 
 
@@ -41,10 +49,8 @@ function resetGame() {
   return container.innerHTML = " ";
 }
 
-function createSquare(index) {
+function createSquare() {
   const newSquare = document.createElement("div");
   newSquare.classList.add("square");
-  newSquare.innerHTML = `${index}`;
-  container.append(newSquare);
   return newSquare;
 }
