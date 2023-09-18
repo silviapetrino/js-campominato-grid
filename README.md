@@ -12,4 +12,6 @@ Griglia Campo Minato. L’utente clicca su un bottone che genererà una griglia 
   - creo un ciclo per stampare 100 volte il quadrato;
   - inserisco il ciclo all'interno dell'evento click del bottone;
 
- 
+ // bonus
+// 1- creo una variabile per prendere l'id del select menu
+// 2- in base al valore sleezionato parte una funzione di gioco diversa

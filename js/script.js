@@ -12,13 +12,26 @@
 //   - creo un ciclo per stampare 100 volte il quadrato;
 // aggiungo la classe active al quadrato 
 
-
+// bonus
+// 1- creo una variabile per prendere l'id del select menu
+// 2- in base al valore sleezionato parte una funzione di gioco diversa
  
 const button = document.getElementById("start-game");
 const container = document.querySelector(".container_sp");
+const gameChoise = document.getElementById("game-difficult");
 
 
-startGameEasy()
+
+
+button.addEventListener("click", function () {
+  resetGame();
+  if (gameChoise.value === "easy") {
+    startGameEasy();
+  } else if (gameChoise.value === "medium") {
+    startGameMedium();
+  }
+});
+
 
 
 // *********functions*************
@@ -28,10 +41,7 @@ function resetGame() {
   return container.innerHTML = " ";
 }
 
-
 function startGameEasy(){
-
-  button.addEventListener("click", function(){
     resetGame()
 
     for(i = 1; i < 101; i++) {
@@ -41,16 +51,40 @@ function startGameEasy(){
       this.classList.toggle("active");
       console.log(this.id)
       })
-    } 
-  })
+    }
+  }
   
-}
+
+function startGameMedium(){
+
+    for(i = 1; i < 82; i++) {
+      const square = createSquareMedium(i);
+      container.append(square);
+      square.addEventListener("click", function(){
+      this.classList.toggle("active");
+      console.log(this.id);
+      })
+    } 
+  }
+
+
+
 
 
 function createSquare(index) {
   const newSquare = document.createElement("div");
-  newSquare.classList.add("square");
+  newSquare.classList.add("square-easy");
   newSquare.innerHTML = ""
   newSquare.id = index;
   return newSquare;
 }
+
+
+function createSquareMedium(index) {
+  const newSquare = document.createElement("div");
+  newSquare.classList.add("square-medium");
+  newSquare.innerHTML = ""
+  newSquare.id = index;
+  return newSquare;
+}
+
