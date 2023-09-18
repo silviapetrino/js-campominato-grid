@@ -21,7 +21,7 @@ const container = document.querySelector(".container_sp");
 const gameChoise = document.getElementById("game-difficult");
 
 
-
+  // al click del bottone la scelta di gioco selezionata attiva la funzione corrispondente
 
 button.addEventListener("click", function () {
   resetGame();
@@ -29,9 +29,10 @@ button.addEventListener("click", function () {
     startGameEasy();
   } else if (gameChoise.value === "medium") {
     startGameMedium();
+  } else if (gameChoise.value === "hard") {
+    startGameHard();
   }
 });
-
 
 
 // *********functions*************
@@ -67,7 +68,30 @@ function startGameMedium(){
     } 
   }
 
+  function startGameMedium(){
 
+    for(i = 1; i < 50; i++) {
+      const square = createSquareHard(i);
+      container.append(square);
+      square.addEventListener("click", function(){
+      this.classList.toggle("active");
+      console.log(this.id);
+      })
+    } 
+  }
+
+  
+  function startGameHard(){
+
+    for(i = 1; i < 50; i++) {
+      const square = createSquareHard(i);
+      container.append(square);
+      square.addEventListener("click", function(){
+      this.classList.toggle("active");
+      console.log(this.id);
+      })
+    } 
+  }
 
 
 
@@ -83,6 +107,15 @@ function createSquare(index) {
 function createSquareMedium(index) {
   const newSquare = document.createElement("div");
   newSquare.classList.add("square-medium");
+  newSquare.innerHTML = ""
+  newSquare.id = index;
+  return newSquare;
+}
+
+
+function createSquareHard(index) {
+  const newSquare = document.createElement("div");
+  newSquare.classList.add("square-hard");
   newSquare.innerHTML = ""
   newSquare.id = index;
   return newSquare;
