@@ -42,6 +42,7 @@ function resetGame() {
   return container.innerHTML = " ";
 }
 
+
 function startGameEasy(){
     resetGame()
 
@@ -54,7 +55,6 @@ function startGameEasy(){
       })
     }
   }
-  
 
 function startGameMedium(){
 
@@ -94,6 +94,7 @@ function startGameMedium(){
   }
 
 
+  // i quadrati sono creati in base alla difficoltà del gioco scelta 
 
 function createSquare(index) {
   const newSquare = document.createElement("div");
