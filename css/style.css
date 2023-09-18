@@ -1,0 +1,19 @@
+body  {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(196, 227, 253);
+}
+
+
+.container_sp {
+  background-color: goldenrod;
+  width: 600px;
+  height: 600px;
+  margin: 40px auto;
+}
+
+.square {
+  width: calc(100% / 10);
+  background-color: blueviolet;
+  border: 2px solid white;
+}
+
