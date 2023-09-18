@@ -65,13 +65,12 @@ function startGameMedium(){
 
 
 
-
   // i quadrati sono creati in base alla difficoltà del gioco scelta 
 
 function createSquare(index) {
   const newSquare = document.createElement("div");
   newSquare.classList.add("square-easy");
-  newSquare.innerHTML = ""
+  newSquare.innerHTML = "";
   newSquare.id = index;
   return newSquare;
 }
@@ -80,7 +79,7 @@ function createSquare(index) {
 function createSquareMedium(index) {
   const newSquare = document.createElement("div");
   newSquare.classList.add("square-medium");
-  newSquare.innerHTML = ""
+  newSquare.innerHTML = "";
   newSquare.id = index;
   return newSquare;
 }
@@ -89,7 +88,7 @@ function createSquareMedium(index) {
 function createSquareHard(index) {
   const newSquare = document.createElement("div");
   newSquare.classList.add("square-hard");
-  newSquare.innerHTML = ""
+  newSquare.innerHTML = "";
   newSquare.id = index;
   return newSquare;
 }
