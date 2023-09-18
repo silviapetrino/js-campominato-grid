@@ -17,40 +17,40 @@
 const button = document.getElementById("start-game");
 const container = document.querySelector(".container_sp");
 
-resetGame()
 
 startGameEasy()
 
-function startGameEasy(){
-
-  button.addEventListener("click", function(){
-
-    for(i = 1; i < 101; i++) {
-      const square = createSquare(i);
-      container.append(square);
-      square.addEventListener("click", function(){
-      this.classList.toggle("active");
-      })
-
-    }
-  
-  })
-  
-}
-
-
 
 // *********functions*************
-
-
 
 
 function resetGame() {
   return container.innerHTML = " ";
 }
 
-function createSquare() {
+
+function startGameEasy(){
+
+  button.addEventListener("click", function(){
+    resetGame()
+
+    for(i = 1; i < 101; i++) {
+      const square = createSquare(i);
+      container.append(square);
+      square.addEventListener("click", function(){
+      this.classList.toggle("active");
+      console.log(this.id)
+      })
+    } 
+  })
+  
+}
+
+
+function createSquare(index) {
   const newSquare = document.createElement("div");
   newSquare.classList.add("square");
+  newSquare.innerHTML = ""
+  newSquare.id = index;
   return newSquare;
 }
