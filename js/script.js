@@ -12,14 +12,27 @@
 //   - creo un ciclo per stampare 100 volte il quadrato;
 
  
-
-const container = document.querySelector(".container_sp");
-resetGame()
-
 const button = document.getElementById("start-game");
 
-console.log(container)
+const container = document.querySelector(".container_sp");
 
+
+button.addEventListener("click", function(){
+
+  container.classList.toggle("d-none");
+
+
+})
+
+for(i = 1; i < 101; i++) {
+  createSquare(i);
+
+}
+
+
+
+
+// *********functions*************
 
 
 
@@ -28,8 +41,10 @@ function resetGame() {
   return container.innerHTML = " ";
 }
 
-function startGame()
-
-
-
-// *********functions*************
+function createSquare(index) {
+  const newSquare = document.createElement("div");
+  newSquare.classList.add("square");
+  newSquare.innerHTML = `${index}`;
+  container.append(newSquare);
+  return newSquare;
+}

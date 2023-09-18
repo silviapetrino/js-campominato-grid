@@ -13,7 +13,12 @@ body  {
 
 .square {
   width: calc(100% / 10);
-  background-color: blueviolet;
+  border: 1px solid black;
+  background-color: rgb(43, 116, 226);
   border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(251, 255, 0)
 }
 
