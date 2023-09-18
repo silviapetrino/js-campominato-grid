@@ -5,7 +5,9 @@ Griglia Campo Minato. L’utente clicca su un bottone che genererà una griglia 
 1. Imposto gli elementi statici in markup con html/css: un bottone, un select menu, un container per la griglia, i quadrati.
 
 2. in Javascript: prendo gli elementi da generare dinamicamente.
-  - il container come ambiente in cui stampare i quadrati.
+  - inserisco il container in una variabile, sarà l'ambiente in cui stampare i quadrati;
+  - prendo il bottone e creo una funzione per inizializzare il gioco;
+  - creo una funzione di reset per svuotare il container;
   - Creo una funzione per generare un quadrato;
   - creo un ciclo per stampare 100 volte il quadrato;
 
