@@ -68,7 +68,7 @@ function startGameMedium(){
     } 
   }
 
-  function startGameMedium(){
+  function startGameHard(){
 
     for(i = 1; i < 50; i++) {
       const square = createSquareHard(i);
