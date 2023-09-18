@@ -1,21 +1,4 @@
-// # js-campominato-grid
-// Griglia Campo Minato. L’utente clicca su un bottone che genererà una griglia di gioco quadrata. Ogni cella ha un numero progressivo, da 1 a 100. Ci saranno quindi 10 caselle per ognuna delle 10 righe. Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
-
-// 1. Imposto gli elementi statici in markup con html/css: un bottone, un select menu, un container per la griglia, i quadrati.
-
-// 2. in Javascript: prendo gli elementi da generare dinamicamente.
-//   - inserisco il container in una variabile, sarà l'ambiente in cui stampare i quadrati;
-//   - prendo il bottone e creo una funzione per inizializzare il gioco;
-//   - creo una funzione di reset per svuotare il container;
-//   - Creo una funzione per generare un quadrato;
-//   - creo un ciclo per stampare 100 volte il quadrato;
-// aggiungo la classe active al quadrato 
-
-// bonus
-// 1- creo una variabile per prendere l'id del select menu
-// 2- in base al valore sleezionato parte una funzione di gioco diversa
- 
 const button = document.getElementById("start-game");
 const container = document.querySelector(".container_sp");
 const gameChoise = document.getElementById("game-difficult");
@@ -80,18 +63,7 @@ function startGameMedium(){
     } 
   }
 
-  
-  function startGameHard(){
 
-    for(i = 1; i < 50; i++) {
-      const square = createSquareHard(i);
-      container.append(square);
-      square.addEventListener("click", function(){
-      this.classList.toggle("active");
-      console.log(this.id);
-      })
-    } 
-  }
 
 
   // i quadrati sono creati in base alla difficoltà del gioco scelta 
